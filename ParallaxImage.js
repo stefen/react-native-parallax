@@ -89,8 +89,7 @@ var ParallaxImage = React.createClass({
         {
           translateY:   scrollY.interpolate({
             inputRange:   [offset - height, offset + WINDOW_HEIGHT + height],
-            outputRange:  [-parallaxPadding, parallaxPadding],
-            extrapolate:  'clamp',
+            outputRange:  [-parallaxPadding, parallaxPadding]
           }),
         },
       ];
@@ -101,7 +100,7 @@ var ParallaxImage = React.createClass({
     }
     var content = (
       <View
-        ref={component => this._container = component}
+        ref={component => (this._container = component)}
         style={[style, styles.container]}
         onLayout={this.handleLayout}
       >
