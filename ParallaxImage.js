@@ -13,14 +13,16 @@ var {
   Dimensions,
   TouchableHighlight,
 } = require('react-native');
+var PropTypes = require('prop-types');
+var createClass = require('create-react-class');
 
 var WINDOW_HEIGHT = Dimensions.get('window').height;
 
-var ParallaxImage = React.createClass({
+var ParallaxImage = createClass({
   propTypes: {
-    onPress:        React.PropTypes.func,
-    scrollY:        React.PropTypes.object,
-    parallaxFactor: React.PropTypes.number,
+    onPress:        PropTypes.func,
+    scrollY:        PropTypes.object,
+    parallaxFactor: PropTypes.number,
     imageStyle:     Image.propTypes.style,
     overlayStyle:   View.propTypes.style,
   },
