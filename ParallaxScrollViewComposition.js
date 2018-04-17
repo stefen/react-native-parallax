@@ -9,6 +9,8 @@ var {
   Animated,
   ScrollView
 } = require('react-native');
+var createClass = require('create-react-class');
+var PropTypes = require('prop-types');
 
 var ParallaxImage = require('./ParallaxImage');
 
@@ -31,9 +33,9 @@ var applyPropsToParallaxImages = function(children, props) {
 };
 
 
-var ParallaxScrollViewComposition = React.createClass({
+var ParallaxScrollViewComposition = createClass({
   propTypes: {
-    scrollViewComponent: React.PropTypes.func,
+    scrollViewComponent: PropTypes.func,
   },
 
   setNativeProps: function(nativeProps) {
