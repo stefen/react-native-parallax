@@ -12,6 +12,7 @@ var {
   StyleSheet,
   Dimensions,
   TouchableHighlight,
+  ViewPropTypes
 } = require('react-native');
 var PropTypes = require('prop-types');
 var createClass = require('create-react-class');
@@ -24,7 +25,7 @@ var ParallaxImage = createClass({
     scrollY:        PropTypes.object,
     parallaxFactor: PropTypes.number,
     imageStyle:     Image.propTypes.style,
-    overlayStyle:   View.propTypes.style,
+    overlayStyle:   ViewPropTypes.style,
   },
 
   getDefaultProps: function() {
